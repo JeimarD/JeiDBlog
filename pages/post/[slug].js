@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { getPosts, getPostsDetails } from "../../services";
+import { getPosts, getPostDetail } from "../../services";
 import {
   PostDetail,
   Categories,
@@ -58,6 +58,6 @@ export async function getStaticPaths() {
 
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
-    fallback: true,
+    fallback: true, 
   };
 }
